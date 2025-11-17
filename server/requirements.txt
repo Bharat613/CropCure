@@ -1,6 +1,9 @@
-flask
-tensorflow
-numpy
-pillow
-scikit-learn
+Flask
 flask-cors
+flask-pymongo
+Pillow
+numpy
+cloudinary
+PyJWT
+tensorflow
+gunicorn
