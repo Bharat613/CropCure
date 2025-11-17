@@ -1,0 +1,58 @@
+.details-page {
+  max-width: 700px;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  text-align: center;
+  background: #ffffffb8;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(46, 125, 50, 0.15);
+  animation: fadeIn 0.6s ease;
+  color: #1b5e20;
+}
+
+.details-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 12px;
+  object-fit: cover;
+  margin: 1rem 0;
+  border: 3px solid #c8e6c9;
+}
+
+.details-desc {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.8rem;
+}
+
+.details-meta {
+  color: #666;
+  margin-bottom: 1.5rem;
+}
+
+.details-page button {
+  background: #43a047;
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.details-page button:hover {
+  background: #2e7d32;
+}
+
+/* fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,163 @@
+{
+  "Potato___Early_blight": {
+    "description": "Early blight is a common fungal disease of potato caused by Alternaria solani. It starts as small brown lesions on older leaves and progresses to defoliation if untreated, reducing yield.",
+    "symptoms": [
+      "Dark brown to black concentric ring spots on older leaves",
+      "Yellowing and drying of leaves from bottom upward",
+      "Poor tuber formation and uneven sizing"
+    ],
+    "causes": [
+      "Warm, humid weather conditions",
+      "Overhead irrigation or poor drainage",
+      "Crop residues left in the soil"
+    ],
+    "pesticides": [
+      {
+        "name": "Chlorothalonil (Bravo™ Fungicide)",
+        "manufacturer": "Zamzows (retailer / private-label image)",
+        "image": "https://zamzows.com/cdn/shop/files/3701_113302_64f092f024b738.92591527_z-one.png?v=1744828246"
+      },
+      {
+        "name": "Mancozeb (Dithane® / Indofil M-45)",
+        "manufacturer": "Shopsource (seller / product listing image)",
+        "image": "https://shopsource.singoo.cc/1109/general/ZyRm67yCZWQ4JJwW.webp"
+      },
+      {
+        "name": "Azoxystrobin (Amistar®)",
+        "manufacturer": "Active Agriscience (image host)",
+        "image": "https://res.cloudinary.com/active-agriscience/images/f_webp,q_auto/v1684425425/active-uan-jug-mockup/active-uan-jug-mockup.png"
+      }
+    ],
+    "fertilizers": [
+      {
+        "name": "Balanced NPK (10:10:10)",
+        "manufacturer": "Made-in-China product image (packaging sample)",
+        "image": "https://image.made-in-china.com/2f0j00AmBiLzayEQkV/Plastic-Fertilizer-Soil-Packaging-Bag-for-Agricultural-Products.jpg"
+      },
+      {
+        "name": "Nitrogen-rich fertilizer (Urea)",
+        "manufacturer": "RegentPlast (product/packaging image)",
+        "image": "https://regentplast.com/wp-content/uploads/2022/12/PESTICIDES-BOTTLES.jpg"
+      },
+      {
+        "name": "Potassium sulfate packet",
+        "manufacturer": "Alibaba / product listing image",
+        "image": "https://s.alicdn.com/%40sc04/kf/H8f789d03ddec4188bd4ad520ce0f43b76/Matte-Surface-100ml-1L-Empty-HDPE-Plastic-Round-Bottle-Screen-Print-for-Chemical-Agricultural-Pesticide-Storage-Transportation.jpg"
+      }
+    ],
+    "organic_alternatives": [
+      "Neem oil spray (3%) weekly",
+      "Compost tea foliar spray",
+      "Bacillus subtilis–based biofungicides"
+    ],
+    "notes": "Avoid overhead irrigation. Rotate crops to reduce soil-borne inoculum. Remove infected debris after harvest. Maintain soil health with organic matter and use certified seed potatoes."
+  },
+
+  "Tomato___Late_blight": {
+    "description": "Late blight, caused by Phytophthora infestans, is a devastating disease of tomato and potato crops. It spreads rapidly in cool, moist environments and can cause total crop loss if uncontrolled.",
+    "symptoms": [
+      "Water-soaked grayish-green spots on leaves and stems",
+      "White mold growth on leaf undersides during humidity",
+      "Dark brown lesions on fruits with irregular shape"
+    ],
+    "causes": [
+      "Prolonged leaf wetness and cool temperatures",
+      "Infected tubers or transplants",
+      "Poor air circulation between plants"
+    ],
+    "pesticides": [
+      {
+        "name": "Mancozeb (Dithane®)",
+        "manufacturer": "Shopsource (seller / product listing image)",
+        "image": "https://shopsource.singoo.cc/1109/general/ZyRm67yCZWQ4JJwW.webp"
+      },
+      {
+        "name": "Copper oxychloride (Blitox® 50)",
+        "manufacturer": "RegentPlast (packaging / product image used)",
+        "image": "https://regentplast.com/wp-content/uploads/2022/12/PESTICIDES-BOTTLES.jpg"
+      },
+      {
+        "name": "Cymoxanil + Mancozeb (Curzate® M8)",
+        "manufacturer": "Zamzows (retailer / image source)",
+        "image": "https://zamzows.com/cdn/shop/files/3701_113302_64f092f024b738.92591527_z-one.png?v=1744828246"
+      }
+    ],
+    "fertilizers": [
+      {
+        "name": "Phosphorus-rich fertilizer (DAP)",
+        "manufacturer": "Made-in-China listing (packaging sample)",
+        "image": "https://image.made-in-china.com/2f0j00AmBiLzayEQkV/Plastic-Fertilizer-Soil-Packaging-Bag-for-Agricultural-Products.jpg"
+      },
+      {
+        "name": "Potassium nitrate bag",
+        "manufacturer": "Alibaba / product listing image",
+        "image": "https://s.alicdn.com/%40sc04/kf/H8f789d03ddec4188bd4ad520ce0f43b76/Matte-Surface-100ml-1L-Empty-HDPE-Plastic-Round-Bottle-Screen-Print-for-Chemical-Agricultural-Pesticide-Storage-Transportation.jpg"
+      },
+      {
+        "name": "Organic compost packet",
+        "manufacturer": "Active Agriscience (image host)",
+        "image": "https://res.cloudinary.com/active-agriscience/images/f_webp,q_auto/v1684425425/active-uan-jug-mockup/active-uan-jug-mockup.png"
+      }
+    ],
+    "organic_alternatives": [
+      "Bordeaux mixture (1%) as a preventive spray",
+      "Trichoderma-based soil application",
+      "Garlic or onion extract sprays"
+    ],
+    "notes": "Ensure good air circulation and avoid overhead watering. Destroy infected plant residues immediately. Use resistant varieties and apply fungicides at early stages of infection."
+  },
+
+  "Tomato___Leaf_Mold": {
+    "description": "Leaf mold is caused by the fungus Passalora fulva and thrives in humid, poorly ventilated tomato greenhouses. It primarily affects foliage, reducing photosynthesis and yield.",
+    "symptoms": [
+      "Yellow spots on upper leaf surfaces turning brown",
+      "Velvety olive-green mold on leaf undersides",
+      "Premature leaf drop and weak fruit development"
+    ],
+    "causes": [
+      "High humidity (>85%) and poor air flow",
+      "Excessive nitrogen fertilization",
+      "Overcrowded planting"
+    ],
+    "pesticides": [
+      {
+        "name": "Copper oxychloride (Blitox® 50)",
+        "manufacturer": "RegentPlast (packaging / photo source)",
+        "image": "https://regentplast.com/wp-content/uploads/2022/12/PESTICIDES-BOTTLES.jpg"
+      },
+      {
+        "name": "Chlorothalonil (Bravo™ Fungicide)",
+        "manufacturer": "Zamzows (retailer / image source)",
+        "image": "https://zamzows.com/cdn/shop/files/3701_113302_64f092f024b738.92591527_z-one.png?v=1744828246"
+      },
+      {
+        "name": "Azoxystrobin (Amistar®)",
+        "manufacturer": "Active Agriscience (image host)",
+        "image": "https://res.cloudinary.com/active-agriscience/images/f_webp,q_auto/v1684425425/active-uan-jug-mockup/active-uan-jug-mockup.png"
+      }
+    ],
+    "fertilizers": [
+      {
+        "name": "Potassium-rich fertilizer",
+        "manufacturer": "Made-in-China listing (packaging sample)",
+        "image": "https://image.made-in-china.com/2f0j00AmBiLzayEQkV/Plastic-Fertilizer-Soil-Packaging-Bag-for-Agricultural-Products.jpg"
+      },
+      {
+        "name": "Calcium nitrate packet",
+        "manufacturer": "Alibaba / product listing image",
+        "image": "https://s.alicdn.com/%40sc04/kf/H8f789d03ddec4188bd4ad520ce0f43b76/Matte-Surface-100ml-1L-Empty-HDPE-Plastic-Round-Bottle-Screen-Print-for-Chemical-Agricultural-Pesticide-Storage-Transportation.jpg"
+      },
+      {
+        "name": "Balanced NPK (20:20:20)",
+        "manufacturer": "RegentPlast (packaging / photo source)",
+        "image": "https://regentplast.com/wp-content/uploads/2022/12/PESTICIDES-BOTTLES.jpg"
+      }
+    ],
+    "organic_alternatives": [
+      "Sulfur dusting or spray under low humidity",
+      "Neem oil (2%) as foliar treatment",
+      "Bacillus amyloliquefaciens-based biofungicides"
+    ],
+    "notes": "Reduce humidity below 85%. Maintain good greenhouse ventilation. Avoid overcrowding and prune lower leaves. Use resistant tomato varieties and apply copper fungicides weekly if needed."
+  }
+}

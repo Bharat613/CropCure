@@ -1,0 +1,316 @@
+.result-page {
+  text-align: center;
+  padding: 2rem 1.5rem;
+  color: #1c1c1c;
+  background: linear-gradient(135deg, #f8fbff, #eaf4ff);
+  min-height: 100vh;
+  font-family: "Poppins", sans-serif;
+  margin-top: 30px; 
+}
+
+/* Title and location */
+.result-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1a237e;
+  margin-bottom: 0.3rem;
+}
+
+.location {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2.5rem;
+}
+
+/* --- DESKTOP: Side-by-Side Layout Container --- */
+.image-description-container {
+  display: flex; 
+  justify-content: center;
+  align-items: flex-start; /* Aligns content to the top */
+  max-width: 900px; 
+  margin: 0 auto 2.5rem; 
+  gap: 2rem; 
+}
+
+/* Image */
+.result-image {
+  max-width: 250px;
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+  margin-bottom: 0; 
+  flex-shrink: 0;
+}
+
+/* Description (right side on desktop) */
+.result-description {
+  font-size: 1rem;
+  color: #333;
+  line-height: 1.6;
+  text-align: left; 
+  padding: 1.5rem; /* Padding for the desktop box */
+  flex-grow: 1; 
+  
+  /* Desktop box style */
+  border-radius: 20px;
+}
+
+.result-description h3 {
+  color: #388e3c;
+  font-size: 1.5rem;
+  margin-top: 0; 
+  margin-bottom: 0.5rem;
+}
+
+
+/* Notes */
+.notes {
+  background: #e3f2fd;
+  padding: 1.5rem;
+  border-radius: 12px;
+  max-width: 900px; 
+  margin: 0 auto 2.5rem;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.notes h4 {
+  color: #1565c0;
+  margin-top: 0;
+  margin-bottom: 0.8rem;
+}
+
+.notes ul {
+  padding-left: 1.5rem;
+  margin: 0;
+  list-style-type: disc;
+}
+
+/* Weather Section */
+.weather-section {
+  position: relative;
+  margin: 3rem 0; 
+  padding: 0 50px; 
+
+}
+
+.weather-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: #0d47a1;
+}
+
+.weather-container {
+  display: flex;
+  overflow-x: auto;
+  gap: 1.5rem; 
+  padding: 1rem; 
+  scroll-behavior: smooth;
+  margin: 0 auto;
+}
+
+.weather-container::-webkit-scrollbar {
+  display: none;
+}
+
+.weather-card {
+  flex: 0 0 180px;
+  background: white;
+  border-radius: 14px;
+  padding: 1.2rem;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
+  border: 1px solid #e0e0e0;
+}
+
+.weather-card:hover {
+  transform: scale(1.05);
+}
+
+/* Scroll buttons - Rectangular and Centered (Hidden on Desktop) */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  
+  background: rgba(0, 0, 0, 0.5); 
+  color: white;
+  border: none;
+  border-radius: 8px; 
+  width: 30px; 
+  height: 50px; 
+  
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  
+  cursor: pointer;
+  font-size: 1.2rem;
+  z-index: 10; 
+  
+  /* Hidden by default (Desktop) */
+  opacity: 0; 
+  pointer-events: none; 
+  transition: all 0.3s ease;
+}
+
+.scroll-btn:hover {
+  opacity: 1;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+.scroll-btn.left {
+  left: 5px;
+}
+
+.scroll-btn.right {
+  right: 5px;
+}
+
+/* Recommendations */
+.recommendation-section {
+  margin-top: 3rem; 
+  margin-bottom: 2rem;
+}
+
+.recommendation-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  color: #0d47a1;
+}
+
+.recommendation-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.recommendation-card {
+  background: white;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: center; 
+  transition: transform 0.2s;
+  border: 1px solid #e0e0e0;
+}
+
+.recommendation-card:hover {
+  transform: translateY(-5px);
+}
+
+.recommendation-card img {
+  width: 80%; 
+  height: 120px; 
+  object-fit: contain;
+  border-radius: 8px;
+  margin-bottom: 0.8rem;
+}
+
+.recommendation-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1a237e;
+  margin-top: 0;
+  margin-bottom: 0.3rem;
+}
+
+.recommendation-card p {
+  font-size: 0.9rem;
+  color: #616161; 
+  margin-top: 0;
+}
+
+/* Responsive (Mobile View: max-width 768px) */
+@media (max-width: 768px) {
+  .result-page {
+    padding: 1.2rem;
+    margin-top: 100px; 
+  }
+
+  /* --- MOBILE: Stacked Layout --- */
+  .image-description-container {
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items horizontally */
+    gap: 1.5rem; 
+    margin-bottom: 2rem;
+  }
+  
+  .result-image {
+    max-width: 300px; 
+    margin-bottom: 0; 
+  }
+
+  .result-description {
+    padding: 20px; /* Applied padding for the box */
+    text-align: justify; /* Aligned text to justify */
+    width: 100%;
+    border: none;
+    border-radius: 0px;
+    background-color: transparent;
+  }
+
+  /* Resetting desktop alignment on mobile */
+  .result-title {
+    font-size: 1.6rem;
+  }
+
+  .weather-section {
+    padding: 0;
+  }
+  
+  /* Show Scroll buttons on Mobile */
+  .scroll-btn {
+    opacity: 1;
+    pointer-events: all;
+    width: 25px; 
+    height: 50px; 
+    margin-top: 20px;
+    font-size: 1rem;
+  }
+.weather-container{
+  gap: 0 !important;
+}
+  .weather-card {
+    flex: 0 0 150px;
+    padding: 0.4rem;
+    margin-left: 5px;
+  }
+
+  .recommendation-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .recommendation-card {
+    padding: 1rem;
+    text-align: left;
+  }
+
+  .recommendation-card img {
+    width: 100%;
+    height: 100px;
+    object-fit: contain;
+  }
+}
+
+.save-btn {
+  margin-top: 10px;
+  padding: 10px 18px;
+  background-color: #2e7d32;
+  color: white;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.save-btn:hover {
+  background-color: #1b5e20;
+}

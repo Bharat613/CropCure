@@ -1,0 +1,116 @@
+.profile-page {
+  padding: 30px;
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 100px;
+}
+
+.profile-header {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.profile-header img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #2f8f2f;
+}
+
+.profile-info h2 {
+  margin: 0;
+  color: #2f8f2f;
+}
+
+.profile-info p {
+  margin: 5px 0;
+  color: #555;
+}
+
+.profile-info button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background: #2f8f2f;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.history-section h3 {
+  color: #1b5e20;
+  margin-bottom: 15px;
+}
+
+.history-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 15px;
+}
+
+.history-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: #e8f5e9;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.history-card:hover {
+  transform: translateY(-3px);
+}
+
+.history-card-header {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+}
+
+.delete-icon {
+  color: red;
+  cursor: pointer;
+  font-size: 16px;
+  transition: color 0.2s;
+}
+
+.delete-icon:hover {
+  color: darkred;
+}
+
+.leaf-image {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.history-card p {
+  margin: 2px 0;
+  font-size: 14px;
+  color: #333;
+  text-align: center;
+}
+.history-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  background: #e8f5e9;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: transform 0.2s, opacity 0.5s;
+}
+
+.history-card.fade-out {
+  opacity: 0;
+  transform: scale(0.95);
+}

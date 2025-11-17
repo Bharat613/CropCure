@@ -1,0 +1,50 @@
+/* =================== ResultCard.css =================== */
+
+.result-card {
+  background-color: #ffffff;
+  border-radius: 14px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  margin-top: 1.5rem;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.result-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 128, 0, 0.2);
+}
+
+.result-card h3 {
+  color: #2e7d32;
+  font-size: 1.3rem;
+  margin-bottom: 0.75rem;
+}
+
+.result-card p {
+  font-size: 1rem;
+  margin: 6px 0;
+  color: #333;
+}
+
+.result-card p strong {
+  color: #1b5e20;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .result-card {
+    padding: 1rem;
+  }
+
+  .result-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .result-card p {
+    font-size: 0.9rem;
+  }
+}

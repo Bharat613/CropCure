@@ -1,0 +1,94 @@
+/* 🌿 CropCure Login Page Styling */
+
+.login-page {
+  background: linear-gradient(135deg, #7ed957, #2f8f2f);
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+}
+
+.login-container {
+  background-color: #ffffff;
+  padding: 40px 50px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  width: 350px;
+  text-align: center;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.login-container h2 {
+  color: #2f8f2f;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.login-container input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+
+.login-container input:focus {
+  border-color: #2f8f2f;
+  box-shadow: 0 0 5px rgba(47, 143, 47, 0.4);
+}
+
+.login-container button {
+  background-color: #2f8f2f;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.login-container button:hover {
+  background-color: #256e25;
+}
+
+/* Link to Register */
+.switch-link {
+  margin-top: 18px;
+  font-size: 14px;
+  color: #333;
+}
+
+.switch-link a {
+  color: #2f8f2f;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.switch-link a:hover {
+  color: #1b4d1b;
+}
+
+/* Subtle entry animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

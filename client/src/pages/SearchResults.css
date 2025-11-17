@@ -1,0 +1,131 @@
+/* 🌿 Search Results Page */
+.search-results {
+  padding: 2rem;
+  background: linear-gradient(135deg, #f8fbff, #eaf4ff);
+  min-height: 100vh;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+  margin-top: 30px;
+}
+
+.search-results h2 {
+  color: #1b4332;
+  margin-bottom: 2rem;
+}
+
+/* 🟢 Grid layout with balanced spacing */
+.results-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem 2.5rem;
+  justify-items: center;
+  padding: 1rem 0;
+}
+
+/* 🟢 Card styling */
+.result-card {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 280px;
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.result-card:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+.result-card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+.result-card h3 {
+  font-size: 1rem;
+  color: #2c3e50;
+  margin: 0.5rem 0;
+}
+
+.result-card p {
+  font-size: 0.9rem;
+  color: #555;
+  min-height: 45px;
+}
+
+.result-card a {
+  color: #1e88e5;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.result-card a:hover {
+  text-decoration: underline;
+}
+
+/* 🌐 Responsive Design */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .results-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .result-card img {
+    height: 140px;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .search-results {
+    padding: 1.5rem 1rem;
+  }
+
+  .search-results h2 {
+    font-size: 1.3rem;
+  }
+
+  .results-grid {
+    grid-template-columns: 1fr 1fr; /* 2 per row for medium mobiles */
+    gap: 1.2rem;
+  }
+
+  .result-card {
+    max-width: 100%;
+    padding: 0.8rem;
+  }
+
+  .result-card img {
+    height: 130px;
+  }
+}
+
+/* Small Phones */
+@media (max-width: 480px) {
+  .results-grid {
+    grid-template-columns: 1fr; /* single column layout */
+    gap: 1rem;
+  }
+
+  .result-card img {
+    height: 150px;
+  }
+
+  .result-card h3 {
+    font-size: 0.95rem;
+  }
+
+  .result-card p {
+    font-size: 0.85rem;
+  }
+}

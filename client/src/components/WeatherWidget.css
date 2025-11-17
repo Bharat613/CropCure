@@ -1,0 +1,107 @@
+/* =================== WeatherWidget.css =================== */
+
+.weather-widget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  border-radius: 16px;
+  max-width: 500px;
+  width: 100%;
+  /* background: #ffffffee; */
+  /* box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15); */
+  transition: all 0.3s ease;
+}
+
+.weather-widget:hover {
+  /* transform: translateY(-3px); */
+  /* box-shadow: 0 8px 18px rgba(0, 0, 0, 0.2); */
+}
+
+.weather-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #2e7d32;
+  text-align: center;
+}
+
+.weather-location {
+  font-size: 1rem;
+  color: #444;
+  font-weight: 700;
+  margin: 0.2rem 0 0;
+  text-align: center;
+}
+
+.weather-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 480px;
+}
+
+.weather-card {
+  background: #f9f9f9;
+  border-radius: 12px;
+  padding: 1rem 1.5rem;
+  flex: 0 0 120px;
+  text-align: center;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.weather-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
+}
+
+.weather-card h4 {
+  font-size: 0.9rem;
+  color: #388e3c;
+  margin-bottom: 0.4rem;
+}
+
+.weather-card p {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1565c0;
+  margin: 0;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 600px) {
+  .weather-widget {
+    max-width: 90% !important;
+    padding: 1.2rem;
+    margin-top: 100px !important;
+    gap: 1rem;
+  }
+
+  .weather-cards {
+    width: 100%;
+    gap: 0.8rem;
+    padding: 0;
+    margin: 0;
+  }
+
+  .weather-card {
+    flex: 0 0 100px;
+    padding: 0.8rem 1rem;
+    transform: scale(0.95);
+  }
+
+  .weather-card p {
+    font-size: 1.1rem;
+  }
+
+  .weather-title {
+    font-size: 1.3rem;
+  }
+
+  .weather-location {
+    font-size: 0.95rem;
+  }
+}
