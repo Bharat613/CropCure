@@ -12,7 +12,7 @@ const Saved = () => {
       return;
     }
 
-    fetch("http://localhost:8000/history", {
+    fetch("https://cropcure-qomt.onrender.com/history", {
       headers: { Authorization: `Bearer ${token}` },
     })
       .then((res) => res.json())
@@ -29,7 +29,7 @@ const Saved = () => {
     if (!window.confirm("Are you sure you want to delete this record?")) return;
 
     try {
-      const res = await fetch(`http://localhost:8000/delete-scan/${scanId}`, {
+      const res = await fetch(`https://cropcure-qomt.onrender.com/delete-scan/${scanId}`, {
         method: "DELETE",
         headers: { Authorization: `Bearer ${token}` },
       });

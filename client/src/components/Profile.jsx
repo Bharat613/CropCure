@@ -16,7 +16,7 @@ export default function Profile() {
     if (!token) navigate("/login");
     else {
       axios
-        .get("http://localhost:8000/profile", { headers: { Authorization: `Bearer ${token}` } })
+        .get("https://cropcure-qomt.onrender.com/profile", { headers: { Authorization: `Bearer ${token}` } })
         .then(res => {
           setUser(res.data);
           setLoading(false);

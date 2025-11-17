@@ -59,8 +59,8 @@ const ImageUploader = () => {
     try {
       const formData = new FormData();
       formData.append("image", imageFile);
-
-      const res = await fetch("http://localhost:8000/predict", {
+//http://localhost:8000
+      const res = await fetch("https://cropcure-qomt.onrender.com/predict", {
         method: "POST",
         headers: { Authorization: `Bearer ${token}` },
         body: formData,

@@ -85,7 +85,7 @@ export default function ResultPage() {
         image_url: image,
       };
 
-      const res = await fetch("http://localhost:8000/save_scan", {
+      const res = await fetch("https://cropcure-qomt.onrender.com/save_scan", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
