@@ -7,3 +7,4 @@ cloudinary
 PyJWT
 tensorflow
 gunicorn
+python-dotenv

@@ -13,14 +13,29 @@ import io, json, os
 import cloudinary
 import cloudinary.uploader
 import cloudinary.api
+from dotenv import load_dotenv
+
+# -------------------------------
+# Load Environment Variables
+# -------------------------------
+load_dotenv()
+
+SECRET_KEY = os.getenv("SECRET_KEY")
+MONGO_URI = os.getenv("MONGODB_URI")
+PORT = int(os.getenv("PORT", 8000))
+
+# Cloudinary vars
+CLOUD_NAME = os.getenv("CLOUD_NAME")
+CLOUD_API_KEY = os.getenv("CLOUD_API_KEY")
+CLOUD_API_SECRET = os.getenv("CLOUD_API_SECRET")
 
 # -------------------------------
 # Cloudinary Configuration
 # -------------------------------
 cloudinary.config(
-    cloud_name="dvrwhrio0",
-    api_key="579491499521839",
-    api_secret="jmBnPgrBoja4dRT3ZmvAeuZPKaM"
+    cloud_name=CLOUD_NAME,
+    api_key=CLOUD_API_KEY,
+    api_secret=CLOUD_API_SECRET
 )
 
 # -------------------------------
@@ -29,8 +44,8 @@ cloudinary.config(
 app = Flask(__name__)
 CORS(app, resources={r"/*": {"origins": "*"}}, supports_credentials=True)
 
-app.config["SECRET_KEY"] = "cropcure-secret-key"
-app.config["MONGO_URI"] = "mongodb+srv://shiva:kanna143@cluster0.ob8fb2z.mongodb.net/cropcure?retryWrites=true&w=majority"
+app.config["SECRET_KEY"] = SECRET_KEY
+app.config["MONGO_URI"] = MONGO_URI
 
 mongo = PyMongo(app)
 db = mongo.db
@@ -75,24 +90,22 @@ for path in MODEL_PATHS:
             print(f"⚠️ Error loading model from {path}: {e}")
 
 if model is None:
-    print("❌ No model loaded. Please check model paths.")
+    print("❌ No model loaded. Check model paths.")
 
 try:
     with open("mapping/class_names.json") as f:
         CLASS_NAMES = json.load(f)
-except Exception as e:
-    print(f"⚠️ Error loading class_names.json: {e}")
+except:
     CLASS_NAMES = []
 
 try:
     with open("mapping/disease_to_pesticides.json") as f:
         DISEASE_MAP = json.load(f)
-except Exception as e:
-    print(f"⚠️ Error loading disease_to_pesticides.json: {e}")
+except:
     DISEASE_MAP = {}
 
 # -------------------------------
-# Helper Function: Image Preprocess
+# Image Preprocessing
 # -------------------------------
 def preprocess_image(image_bytes, img_size=(224, 224)):
     try:
@@ -109,7 +122,7 @@ def preprocess_image(image_bytes, img_size=(224, 224)):
 # -------------------------------
 @app.route("/", methods=["GET"])
 def home():
-    return jsonify({"message": "🌿 CropCure API connected to MongoDB successfully!"})
+    return jsonify({"message": "🌿 CropCure API Running!"})
 
 # -------------------------------
 # Auth Routes
@@ -136,7 +149,6 @@ def register():
         return jsonify({"message": "User registered successfully!", "user_id": str(user_id)}), 201
 
     except Exception as e:
-        print(f"⚠️ Registration error: {e}")
         return jsonify({"error": "Server error during registration", "details": str(e)}), 500
 
 
@@ -152,14 +164,13 @@ def login():
         token = jwt.encode({
             "user_id": str(user["_id"]),
             "exp": datetime.utcnow() + timedelta(hours=5)
-        }, app.config["SECRET_KEY"], algorithm="HS256")
+        }, SECRET_KEY, algorithm="HS256")
 
         return jsonify({
             "token": token,
             "user": {"name": user["name"], "email": user["email"]}
         })
     except Exception as e:
-        print(f"⚠️ Login error: {e}")
         return jsonify({"error": "Server error during login", "details": str(e)}), 500
 
 
@@ -248,29 +259,6 @@ def predict(current_user):
         return jsonify({"error": str(e)}), 500
 
 
-@app.route("/save_scan", methods=["POST"])
-@token_required
-def save_scan(current_user):
-    data = request.get_json()
-    try:
-        db.predictions.insert_one({
-            "user_id": str(current_user["_id"]),
-            "disease_name": data.get("disease_name"),
-            "confidence": data.get("confidence"),
-            "description": data.get("description"),
-            "pesticides": data.get("pesticides", []),
-            "fertilizers": data.get("fertilizers", []),
-            "notes": data.get("notes"),
-            "image_url": data.get("image_url"),
-            "saved": True,
-            "timestamp": datetime.utcnow()
-        })
-        return jsonify({"message": "Scan saved successfully"}), 200
-    except Exception as e:
-        print("Save error:", e)
-        return jsonify({"error": str(e)}), 500
-
-
 @app.route("/history", methods=["GET"])
 @token_required
 def history(current_user):
@@ -281,19 +269,10 @@ def history(current_user):
             scan["_id"] = str(scan["_id"])
         return jsonify({"history": scans}), 200
     except Exception as e:
-        print("History fetch error:", e)
         return jsonify({"error": str(e)}), 500
 
-
-@app.route("/delete-scan/<string:scan_id>", methods=["DELETE", "OPTIONS"])
+@app.route("/delete-scan/<string:scan_id>", methods=["DELETE"])
 def delete_scan(scan_id):
-    if request.method == "OPTIONS":
-        response = make_response()
-        response.headers["Access-Control-Allow-Origin"] = "http://localhost:5173"
-        response.headers["Access-Control-Allow-Headers"] = "Authorization, Content-Type"
-        response.headers["Access-Control-Allow-Methods"] = "GET, POST, DELETE, OPTIONS"
-        return response, 200
-
     try:
         result = db.predictions.delete_one({"_id": ObjectId(scan_id)})
         if result.deleted_count == 0:
@@ -301,7 +280,6 @@ def delete_scan(scan_id):
 
         return jsonify({"message": "Record deleted successfully"}), 200
     except Exception as e:
-        print("Delete error:", e)
         return jsonify({"error": str(e)}), 500
 
 
@@ -309,4 +287,4 @@ def delete_scan(scan_id):
 # Run App
 # -------------------------------
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=8000, debug=True)
+    app.run(host="0.0.0.0", port=PORT, debug=True)
