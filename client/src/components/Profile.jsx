@@ -52,7 +52,7 @@ export default function Profile() {
 
       const token = localStorage.getItem("token");
       try {
-        await axios.delete(`http://localhost:8000/delete-scan/${scanId}`, {
+        await axios.delete(`https://cropcure-qomt.onrender.com/delete-scan/${scanId}`, {
           headers: { Authorization: `Bearer ${token}` },
         });
         // No need to fetch profile again, already removed from UI
