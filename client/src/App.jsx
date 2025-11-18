@@ -12,7 +12,6 @@ import SearchResults from "./pages/SearchResults"; // ✅ Search Page Import
 import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Profile from "./components/Profile.jsx";
-//this is edit
 
 function App() {
   return (
